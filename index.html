@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Soltane Restaurant</title>
+    </head>
+<body>
+        <!-- -----------------------Navbar start----------------------- -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top text-default">
+        <div class="container">
+                <a class="navbar-brand" href="#"><h2 style="font-weight:bold; margin-top:7px; color:#05a081"><i class="fa fa-pagelines fa-lg"></i>سلطان</h2> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sol">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="sol">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-book fa-lg"></i> Menu</a>
+                        <div class="dropdown-menu mt-3" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-secondary" href="#">Lunch</a>
+                            <a class="dropdown-item text-secondary" href="#">Dinner</a>
+                            <a class="dropdown-item text-secondary" href="#">Dessert & Drink</a>
+                            <a class="dropdown-item text-secondary" href="#">Daily Special</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a  class="nav-link" data-toggle="modal" href="#reserveModal"><i class="fa fa-bell fa-lg"></i> Reservation</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="About.html"><i class="fa fa-info fa-lg"></i> About</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="#"><i class="fa fa-map-marker fa-lg"></i> Locations</a></li>
+                    <li class="nav-item"><a  class="nav-link btn text-dark" href="#" ><i class="fa fa-dollar fa-lg"></i> Order now</a></li>
+                </ul>
+            </div>
+        </div>    
+    </nav>
+     <!---------------- Modal for the button in the Header --------------->
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-lg">
+                <div class="modal-header  text-white">
+                    <h3 class="modale-title">Reserve a Table</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> 
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <!--------------- Form in the modal --------------->
+                        <form>
+                            <div class="form-group row">
+                                 <label for="numCumpers" class="col-form-label col-sm-6">Number of people</label>
+                                <div class="col col-form-label">
+                                    <select name="numCumpers"  class="form-control" id="numCumpers">
+                                        <option selected> 6 people</option>
+                                        <option value="1">7 people</option>
+                                        <option value="2">8 people</option>
+                                        <option value="3">9 people</option>
+                                        <option value="4">10 people</option>
+                                        <option value="5">11 people</option>
+                                        <option value="6">12 people</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateid" class="col-form-label col-sm-6 ">Date</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" id="dateid" name="dateid" placeholder="mm/dd/yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Time:</label> 
+                                <div class="col-sm-10">
+                                    <div class="btn-group btn-group-toggle col" data-toggle="buttons">
+                                        <label class="btn  btn-secondary active">
+                                            <input type="radio" name="campsitetype" id="tent" autocomplete="off" value="Tent" checked>6pm
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">7pm
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">8pm
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">9pm
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">10pm
+                                        </label>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="form-group row">
+                                <button type="submit" text="Cancel" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                <button type="submit" text="search" class="btn btn-sm ml-2 color-green" >Find a table</button>
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+        <!--------------- Carousel Slide Background Images --------------->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item carousel1 active" style='background-image: url("img/img4.jpg")'>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h4 class="display-4">Fresh & Healthy food</h4>
+                        <button type="button" class="btn btn-outline-light">Menu</button>
+                    </div>
+                </div>
+                <div class="carousel-item carousel1" style='background-image: url("img/img8.jpg")'>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h4 class="display-4">Eat Healthy & Live Happier!</h4>
+                        <button type="button" class="btn btn-outline-light">Order now</button>
+                    </div>
+                </div>
+                <div class="carousel-item carousel1" style='background-image: url("img/img5.jpg")'>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h4 class="display-4">Feeding 8, 80 or 800? We can help.</h4>
+                        <button type="button" class="btn btn-outline-light">Catering</button>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!--------------- First small Carousel --------------->
+        <div class="container">
+            <div class="row row-content">
+                <div class="col-sm-4">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item carousel2 active" style='background-image: url("img/img7.jpg")'>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="display-6">Where family and friends Gather</p>
+                                        <button type="button" class="btn btn-outline-light">Menu</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------- Second small carousel --------------->    
+                <div class="col-sm-4">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item carousel2 active" style='background-image: url("img/img6.jpg")'>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="display-6">Fresh & Healthy food</p>
+                                        <button type="button" class="btn btn-outline-light">Find location</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------- Second small carousel --------------->        
+                <div class="col-sm-4">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item carousel2 active" style='background-image: url("img/img3.jpg")'>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <p class="display-6">Fresh & Healthy food</p>
+                                        <button type="button" class="btn btn-outline-light">Order now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white">
+        <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col offset-4">
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h2 class="card-title align-items-center" style="font-weight:bold; margin-top:7px; color:#05a081"><i class="fa fa-pagelines fa-lg"></i>سلطان</h2>
+                    <hr>
+                        <!--<h6 class="card-subtitle mb-2 text-muted">Subscribe to our newsletter</h6> -->
+                        <p class="card-text">Want to be the first to receive our new specials, as well as coupons and promotions? <!-- <strong style="font-weight:bold; margin-top:7px; color:#05a081">سلطان !</strong></p>-->
+                        <p for="#email"><strong>Sign up to receive our newsletter!</strong></p>
+                        <input type="email"placeholder="Email Address" class="form-control" id="email">
+                    </br>
+                        <button type="submit" class="btn btn-dark btn-lg color-green">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div> 
+    </div>
+                         <!-- Location started-->
+        <div class="container text-center mt-5">
+            <h1> Our Locations</h1>
+            <P> RESTAURANT REVIEWS FROM ACROSS THE UK, UPDATED EVERY WEEK</P>
+        </div>
+        <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div class="card mb-3">
+                    <img src="img/img16.jpg" class="card-img-top"alt="London" style="height: 270px">
+                    <div class="card-body">
+                        <h5 class="card-title">Nashville</h5>
+                        <p class="card-text">as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                    <div class="card mb-3">
+                            <img src="img/img13.jpg" class="card-img-top"alt="London" style="height: 270px">
+                            <div class="card-body">
+                                <h5 class="card-title">San Francisco</h5>
+                                <p class="card-text">as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                    </div>   
+            </div>
+            <div class="col">
+                <div class="card mb-3">
+                    <img src="img/img12.jpg" class="card-img-top"alt="London" style="height: 270px">
+                    <div class="card-body">
+                        <h5 class="card-title">New York</h5>
+                        <p class="card-text">as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>  
+            </div>
+            <div class="col">
+                <div class="card mb-3">
+                    <img src="img/img15.jpg" class="card-img-top"alt="London" style="height: 270px">
+                    <div class="card-body">
+                        <h5 class="card-title">Miami</h5>
+                        <p class="card-text">as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+             
+        <!-- -------Footer------- -->
+    <footer class="site-footer">
+            <div class="container">
+                <div class="row">             
+                    <div class="col-4 col-sm-2" offset-1>
+                    <h5 style="color:#05a081">Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" style="color:white">Home</a></li>
+                            <li><a href="#" style="color:white">About</a></li>
+                            <li><a href="#menu" style="color:white">Menu</a></li>
+                            <li><a href="#" style="color:white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a role="button" style="color:white" class="btn btn-link" href="tel:(610)969-8044"><i class="fa fa-phone"></i> (610)969-8044</a><br />
+                        <a role="button"style="color:white" class="btn btn-link" href="soltanne92@gmail.com"><i class="fa fa-envelope-o"></i> soltanne92@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+      <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
