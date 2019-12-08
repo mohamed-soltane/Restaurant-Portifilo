@@ -115,5 +115,7 @@ color:white;
 .b{
     border-top: 1px solid #05a081; 
     padding: 50px;
-    
+    }
+.text-green{
+    color:#05a081
 }
