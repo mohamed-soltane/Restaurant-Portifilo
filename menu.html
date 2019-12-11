@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Soltane Restaurant</title>
+    </head>
+<body>
+        <!-- -----------------------Navbar start----------------------- -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top text-default">
+        <div class="container">
+                <a class="navbar-brand" href="index.html"><h2 style="font-weight:bold; margin-top:7px; color:#05a081"><i class="fa fa-pagelines fa-lg"></i>سلطان</h2> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sol">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="sol">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a  class="nav-link" href="#"><i class="fa fa-book fa-lg"></i> Menu</a></li>
+                    <li class="nav-item"><a  class="nav-link" data-toggle="modal" href="#reserveModal"><i class="fa fa-bell fa-lg"></i> Reservation</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="About.html"><i class="fa fa-info fa-lg"></i> About</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="#loca"><i class="fa fa-map-marker fa-lg"></i> Locations</a></li>
+                    <li class="nav-item"><a  class="nav-link btn text-dark" href="https://www.ubereats.com/en-US/"target="_blank"><i class="fa fa-dollar fa-lg"></i> Order now</a></li>
+                </ul>
+            </div>
+        </div>    
+    </nav>
+     <!---------------- Modal for the button in the Nav --------------->
+     <div id="reserveModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modal-lg">
+                    <div class="modal-header  text-white">
+                        <h3 class="modale-title">Reserve a Table</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div> 
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <!--------------- Form in the modal --------------->
+                            <form>
+                                <div class="form-group row">
+                                        <label for="numCumpers" class="col-form-label col-sm-6">Number of people</label>
+                                    <div class="col col-form-label">
+                                        <select name="numCumpers"  class="form-control" id="numCumpers">
+                                            <option selected> 6 people</option>
+                                            <option value="1">7 people</option>
+                                            <option value="2">8 people</option>
+                                            <option value="3">9 people</option>
+                                            <option value="4">10 people</option>
+                                            <option value="5">11 people</option>
+                                            <option value="6">12 people</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="dateid" class="col-form-label col-sm-6 ">Date</label>
+                                    <div class="col">
+                                        <input type="date" class="form-control" id="dateid" name="dateid" placeholder="mm/dd/yyyy" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Time:</label> 
+                                    <div class="col-sm-10">
+                                        <div class="btn-group btn-group-toggle col" data-toggle="buttons">
+                                            <label class="btn  btn-secondary active">
+                                                <input type="radio" name="campsitetype" id="tent" autocomplete="off" value="Tent" checked>6pm
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">7pm
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">8pm
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">9pm
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="Campsitetype" id="RV" value="RV" autocomplete="off">10pm
+                                            </label>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="form-group row">
+                                    <button type="submit" text="Cancel" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" text="search" class="btn btn-sm ml-2 color-green" >Find a table</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                         <!-- Quick Select-->
+    <div class="bg-white">                    
+        <div class="container row-content">
+            <h2 class="d-none d-lg-block">What are you looking for?</h2>
+            <div class="row row-content slct">
+                <div class="col d-none d-xl-block">
+                    <img src="img/img21.jpeg" alt="burger">
+                    <p class="text-center mt-3">Pasta</p>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <img src="img/img21.jpeg" alt="burger">
+                    <p class="text-center mt-3">Burger</p>
+                </div>
+                <div class="col d-none d-md-block">
+                    <img src="img/img21.jpeg" alt="burger">
+                    <p class="text-center mt-3">Wings</p>
+                </div>
+                <div class="col d-none d-sm-block">
+                    <img src="img/img21.jpeg" alt="burger">
+                    <p class="text-center mt-3">Salads</p>
+                </div>
+                <div class="col d-none d-sm-block">
+                    <img src="img/img21.jpeg" alt="burger">
+                    <p class="text-center mt-3">Greek</p>
+                </div>
+                
+            </div>
+        </div>   
+                     
+    <div class="container">                    
+        <div class="row row-content">
+            <div class="col-12 col-sm-4 hh">
+             <h2><strong>Sandwiches</strong></h2>  
+                <p class="mnu">Half price between 2-5pm<br>For each additional dressing .85$</p>
+                <h4 class="mt-5">Chicken Quessedia</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Hot Wings</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Mozzarella Stiks</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Potato Skins</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Stuffed Peppers</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Stuffed Mashrooms</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h1>Salad</h1>  
+                <p class="mnu">Served with choice of dressing and cup of soup</p>
+                <h4 class="mt-5">Cesar Salad</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Greek Salad</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                <h4 class="mt-3">Soltane Salad</h4>
+                <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+            </div>
+            <div class="col-12 col-sm-4 hh">
+                    <h2><strong>Sandwiches</strong></h2>  
+                    <p class="mnu">Served with french fries</br> For each additional side $1</p>
+                    <h4 class="mt-5">Grilled Chicken </h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">B.L.T</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Tuna Melt</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Ruben Melt</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Cheese Steak</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h1>Burgers</h1>  
+                    <p class="mnu">Served with french fries, Cole Slaw and Pickle</br> For each additional side $1</p>                    <h4 class="mt-5">Cesar salad</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Hamburger</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">N.Y. Burger</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Texas Burger</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+            </div>
+            <div class="col col-sm-4 hh">
+                    <h2><strong>Entrees</strong></h2>  
+                    <p class="mnu">Served with choice of soup or salad and bread sticks</p>
+                    <h4 class="mt-5"> N.Y. Strip Steak </h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Seafood Supreme</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Steak & Shrimp Scampi</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Chicken Alfredo</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Spaghetti Meatball</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Soltane Spaghetti</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h1>Dessert</h1>  
+                    <p class="mnu">All the dessert are homemade</p>
+                    <h4 class="mt-5">CheeseCake</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">choclate cake </h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+                    <h4 class="mt-3">Apple Pie</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur 8.99</p>
+
+            </div>
+         </div>   
+    </div>  
+    </div>      
+        <!-- -------Footer------- -->
+    <footer class="site-footer">
+            <div class="container">
+                <div class="row">             
+                    <div class="col-4 col-sm-2" offset-1>
+                    <h5 style="color:#05a081">Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" style="color:white">Home</a></li>
+                            <li><a href="#" style="color:white">About</a></li>
+                            <li><a href="#menu" style="color:white">Menu</a></li>
+                            <li><a href="#" style="color:white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-sm-5 text-center">
+                    <h5 style="color:#05a081">Social</h5>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a role="button" style="color:white" class="btn btn-link" href="tel:(610)969-8044"><i class="fa fa-phone"></i> (610)969-8044</a><br />
+                        <a role="button"style="color:white" class="btn btn-link" href="soltanne92@gmail.com"><i class="fa fa-envelope-o"></i> soltanne92@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+      <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

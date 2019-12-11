@@ -2,6 +2,9 @@ body{
     font-family: "open sans", sans-serif;
     background-color:rgb(236, 239, 241);
 }
+.my-carousel{
+    margin-top:-83px;
+}
 .color-green{
    background: #05a081;
    color:#fff;
@@ -11,7 +14,6 @@ body{
 }
 .row-content {
     padding: 30px 0;
-    border-bottom: 1px ridge;
     min-height: 200px;
 }
 .row-us{
@@ -20,13 +22,18 @@ body{
 .site-footer{
     background-image: linear-gradient(rgb(31, 31, 32), rgb(185, 182, 182));
     padding: 5px 0;
-}
+    }
+    
 .navbar{
-background-color: #232a34;
+background-color: rgba(0, 0, 0, 0.6);
 border-bottom-color: #05a081;
+border-top: none !important;
+border-right: none !important;
+border-left: none !important;
 border-width: 3px;
 border-style:solid;
 }
+
 .dropdown-menu
 {
     background-color: #232a34;
@@ -95,7 +102,8 @@ color:white;
     margin-bottom:30px;
     font-size:45px;
 }
-.contact-item i {
+
+.contact-item i{
     color:#05a081; 
 
 }
@@ -119,3 +127,22 @@ color:white;
 .text-green{
     color:#05a081
 }
+
+.slct img{
+    border-radius: 50%;
+}
+
+.slct p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mnu{
+    color:#05a081;
+    padding-bottom: 40px;
+    border-bottom: 2px solid black;
+
+}
+.hh h1 {
+    color:#5c1819;
+    }
